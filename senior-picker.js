@@ -19,14 +19,8 @@ function seniorClear(clearGenerated = false) {
   seniorSelection = null; seniorText = '';
 }
 function seniorSentence(topic,mode = 'idea') {
-  const person = audience === 'student' ? 'I need' : 'They need';
-  const action = seniorHelp.find(h => h[0] === mode)[2];
-  return person + ' help to ' + action + '. The topic is: ' + topic.label.charAt(0).toLowerCase() + topic.label.slice(1) + '.';
-}
-function seniorSyncAudience() {
-  if (seniorSelection && $('difficulty').value === seniorText) {
-    seniorText = seniorSentence(seniorSelection.topic,seniorSelection.mode); $('difficulty').value = seniorText;
-  }
+    const action = seniorHelp.find(h => h[0] === mode)[2];
+  return 'They need help to ' + action + '. The topic is: ' + topic.label.charAt(0).toLowerCase() + topic.label.slice(1) + '.';
 }
 function seniorTopics() {
   const s = seniorSubject(), year = Number($('senior-year').value), level = $('senior-level').value;

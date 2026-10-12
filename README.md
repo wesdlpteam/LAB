@@ -1,6 +1,6 @@
 # CRAFT Learning at Home
 
-A prompt builder for parents, carers and students. Choose a school year, subject, topic and plain-language skill, optionally personalise the activity, then copy the prompt into Claude to create an interactive artifact for review.
+A prompt builder for parents and carers helping their child at home. Choose a school year, subject, topic and plain-language skill, optionally personalise the activity, then copy the prompt into Claude to create an interactive artifact for review.
 
 ## Coverage
 

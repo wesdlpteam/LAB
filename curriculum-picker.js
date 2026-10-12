@@ -46,21 +46,12 @@ function clearCurriculumSelection(clearGenerated = false) {
   $('curriculum-selection').textContent = '';
 }
 function curriculumSentence(item) {
-  return (audience === 'student' ? 'I need help with: ' : 'They need help with: ') +
+  return 'They need help with: ' +
     item.label.charAt(0).toLowerCase() + item.label.slice(1) + '.';
 }
 function unsureSentence() {
-  return (audience === 'student' ? 'I am' : 'They are') + ' finding ' + subjectDisplayName() +
+  return 'They are finding ' + subjectDisplayName() +
     ' difficult, but I am not sure which skill is the problem. Ask one simple question to help identify a starting point before building.';
-}
-function syncCurriculumAudience() {
-  seniorSyncAudience();
-  if (lastUnsureText && $('difficulty').value === lastUnsureText) {
-    lastUnsureText = unsureSentence(); $('difficulty').value = lastUnsureText;
-  }
-  if (selectedCurriculum && $('difficulty').value === selectedCurriculumText) {
-    selectedCurriculumText = curriculumSentence(selectedCurriculum); $('difficulty').value = selectedCurriculumText;
-  }
 }
 function addOption(select, value, label) {
   const option = document.createElement('option');

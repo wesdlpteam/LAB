@@ -284,7 +284,7 @@ function resizeDifficulty() {
   field.style.height = Math.max(110, field.scrollHeight + 2) + 'px';
 }
 function exampleText(description) {
-  return `${audience === 'student' ? 'I need' : 'They need'} help with ${description}.`;
+  return `They need help with ${description}.`;
 }
 function syncSelectedExample() {
   if (!selectedExample || $('difficulty').value !== lastExampleText) return;
